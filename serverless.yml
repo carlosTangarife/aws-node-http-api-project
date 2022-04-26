@@ -44,12 +44,12 @@ functions:
       - httpApi:
           path: /movie/{id}
           method: put    
-    deleteMovie:
-      handler: deleteMovie.deleteMovie
-      events:
-        - httpApi:
-            path: /movie/{id}
-            method: delete                                    
+  deleteMovie:
+    handler: deleteMovie.deleteMovie
+    events:
+      - httpApi:
+          path: /movie/{id}
+          method: delete                                    
 
 resources:
   Resources:

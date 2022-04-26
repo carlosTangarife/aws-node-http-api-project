@@ -1,0 +1,16 @@
+{
+  "name": "aws-node-http-api-project",
+  "version": "1.0.0",
+  "description": "carlos test-2",
+  "main": "handler.js",
+  "dependencies": {
+    "aws-sdk": "^2.1121.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cjt860826@gmail.com",
+  "license": "ISC"
+}

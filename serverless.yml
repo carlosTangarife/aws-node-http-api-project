@@ -6,6 +6,12 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs14.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+          - dynamodb:*
+      Resource:
+          - arn:aws:dynamodb:us-east-1:923195502435:table/MoviesTable
 
 functions:
   hello:
@@ -14,3 +20,17 @@ functions:
       - httpApi:
           path: /
           method: get
+
+resources:
+  Resources:
+    MoviesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: MoviesTable
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+            - AttributeName: id
+              AttributeType: S
+        KeySchema:
+            - AttributeName: id
+              KeyType: HASH          

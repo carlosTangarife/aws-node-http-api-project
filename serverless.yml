@@ -25,7 +25,31 @@ functions:
     events:
       - httpApi:
           path: /movies
-          method: post          
+          method: post   
+  getMovies:
+    handler: getMovies.getMovies
+    events:
+      - httpApi:
+          path: /movies
+          method: get 
+  getMovie:
+    handler: getMovie.getMovie
+    events:
+      - httpApi:
+          path: /movie/{id}
+          method: get        
+  updateMovie:
+    handler: updateMovie.updateMovie
+    events:
+      - httpApi:
+          path: /movie/{id}
+          method: put    
+    deleteMovie:
+      handler: deleteMovie.deleteMovie
+      events:
+        - httpApi:
+            path: /movie/{id}
+            method: delete                                    
 
 resources:
   Resources:

@@ -20,6 +20,12 @@ functions:
       - httpApi:
           path: /
           method: get
+  addMovie:
+    handler: addMovie.addMovie
+    events:
+      - httpApi:
+          path: /movies
+          method: post          
 
 resources:
   Resources:
